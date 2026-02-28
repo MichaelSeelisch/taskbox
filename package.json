@@ -25,7 +25,8 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "init-msw": "msw init public/"
+    "init-msw": "msw init public/",
+    "test-storybook": "vitest --project=storybook"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^4.1.3",
@@ -34,6 +35,7 @@
     "@storybook/addon-docs": "^10.1.11",
     "@storybook/addon-vitest": "^10.1.11",
     "@storybook/react-vite": "^10.1.11",
+    "@storybook/test": "8.6.15",
     "@types/node": "^24.10.1",
     "@types/react": "^19.2.5",
     "@types/react-dom": "^19.2.3",
@@ -62,5 +64,10 @@
       "plugin:storybook/recommended"
     ]
   },
-  "packageManager": "yarn@4.12.0"
+  "packageManager": "yarn@4.12.0",
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
+  }
 }
